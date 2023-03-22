@@ -25,6 +25,12 @@ export default defineNuxtConfig({
 	modules: [
 		'@pinia/nuxt'
 	],
+	imports: {
+		dirs: ['./store'],
+	},
+	pinia: {
+		autoImports: ['defineStore', 'acceptHMRUpdate'],
+	},
 	// css: ["/assets/styles/test.css"],
 	vite: {
 		css: {
