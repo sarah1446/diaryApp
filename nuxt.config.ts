@@ -2,9 +2,9 @@
 export default defineNuxtConfig({
 	// title: 'Diary App',
 	// description: 'Diary description..',
-	alias: {
-		"@": "/",
-	},
+	// alias: {
+	// 	"@": "/",
+	// },
 	app: {
 		head: {
 			"meta": [
@@ -22,15 +22,29 @@ export default defineNuxtConfig({
 			"noscript": []
 		}
 	},
-	css: ["@/assets/styles/_colors.scss"],
+	modules: [
+		'@pinia/nuxt'
+	],
+	// css: ["/assets/styles/test.css"],
 	vite: {
 		css: {
 			preprocessorOptions: {
+				// scss: {
+				// 	includePaths: ['/assets/styles/_colors.scss'],
+				// },
 				scss: {
-					// additionalData: '@use "@/assets/styles/_colors.scss" as *;'
-					additionalData: '@import "@/assets/styles/_colors.scss" as *;'
+					// additionalData: '@import "@/assets/styles/_colors.scss" as *;'
+					// additionalData: '@import "@/assets/styles/_colors.scss" as *;'
 				}
 			}
 		}
-	}
+	},
+	// buildModules: [
+	// 	'@nuxtjs/style-resources',
+	// ],
+	// styleResources: {
+	// 	scss: [
+	// 		'~/assets/styles/_colors.scss',
+	// 	],
+	// },
 })

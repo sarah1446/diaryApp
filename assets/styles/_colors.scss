@@ -1,10 +1,11 @@
-//* {
-//	padding: 0;
-//	margin: 0;
-//	background-color: lime;
-//}
+
 $primary: #49240F;
 $secondary: #E4A79D;
 body {
 	background-color: $secondary;
+	border:3px solid red;
+}
+* {
+	margin:0;
+	padding:0;
 }
